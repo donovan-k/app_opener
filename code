@@ -1,0 +1,84 @@
+from pynput.keyboard import Key, Controller as KeyboardController
+from pynput.mouse import Button, Controller as MouseController
+import time
+
+mouse = MouseController()
+keyboard = KeyboardController()
+
+time.sleep(1)
+mouse.position = (911, 744)
+mouse.click(Button.left, 1)
+appChoice = str(input('Enter a letter to open up certain app or website: h(hulu), n(netflix), g(google), l(Lake Land), s(Spotify), w(Witcher), c(chegg)'))
+time.sleep(.5)
+
+if appChoice == 'h':
+    mouse.position = (517, 1065)
+    mouse.click(Button.left, 1)
+    time.sleep(1)
+    mouse.position = (492, 52)
+    mouse.click(Button.left, 1)
+    time.sleep(2)
+    keyboard.type('hulu.com')
+    keyboard.press(Key.enter)
+    keyboard.release(Key.enter)
+
+elif appChoice == 'n':
+    mouse.position = (121, 1063)
+    mouse.click(Button.left, 1)
+    time.sleep(2)
+    keyboard.type('netflix')
+    time.sleep(2)
+    keyboard.press(Key.enter)
+    keyboard.release(Key.enter)
+
+elif appChoice == 'g':
+    mouse.position = (517, 1065)
+    mouse.click(Button.left, 1)
+    time.sleep(1)
+    mouse.position = (492, 52)
+    mouse.click(Button.left, 1)
+    time.sleep(2)
+    keyboard.type('google.com')
+    keyboard.press(Key.enter)
+    keyboard.release(Key.enter)
+
+elif appChoice == 'l':
+    mouse.position = (517, 1065)
+    mouse.click(Button.left, 1)
+    time.sleep(1)
+    mouse.position = (492, 52)
+    mouse.click(Button.left, 1)
+    time.sleep(2)
+    keyboard.type('lakelandcollege.edu')
+    keyboard.press(Key.enter)
+    keyboard.release(Key.enter)
+
+elif appChoice == 'c':
+    mouse.position = (517, 1065)
+    mouse.click(Button.left, 1)
+    time.sleep(1)
+    mouse.position = (492, 52)
+    mouse.click(Button.left, 1)
+    time.sleep(2)
+    keyboard.type('chegg.com')
+    keyboard.press(Key.enter)
+    keyboard.release(Key.enter)
+
+elif appChoice == 's':
+    mouse.position = (121, 1063)
+    mouse.click(Button.left, 1)
+    time.sleep(2)
+    keyboard.type('spotify')
+    time.sleep(2)
+    keyboard.press(Key.enter)
+    keyboard.release(Key.enter)
+
+elif appChoice == 'w':
+    mouse.position = (121, 1063)
+    mouse.click(Button.left, 1)
+    time.sleep(2)
+    keyboard.type('witcher')
+    time.sleep(2)
+    keyboard.press(Key.enter)
+    keyboard.release(Key.enter)
+
